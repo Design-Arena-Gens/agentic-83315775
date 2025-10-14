@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 210 20% 98%;
+  --color-foreground: 222 47% 11%;
+  --color-primary: 200 90% 48%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-muted: 220 15% 96%;
+  --color-card: 0 0% 100%;
+  --color-border: 215 16% 90%;
+  --color-accent: 160 84% 39%;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  color: hsl(var(--color-foreground));
+  background: hsl(var(--color-background));
+}
+
+/* Focus outline for accessibility */
+.focus-ring:focus-visible {
+  outline: 3px solid hsl(var(--color-primary));
+  outline-offset: 2px;
+}
+
+.container { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
